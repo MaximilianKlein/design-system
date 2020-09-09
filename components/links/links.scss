@@ -1,0 +1,56 @@
+@mixin ds-copy-link {
+    color: $color-corporate-green-dark;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+.ds-copy-link {
+    @include ds-copy-link;
+}
+
+/* if the headline is the link */
+
+a.ds-heading-link {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $color-corporate-green-dark;
+        text-decoration: underline;
+    }
+}
+
+/* if the headline is IN the link */
+
+a {
+    &:hover,
+    &:focus {
+        .ds-heading-link {
+            color: $color-corporate-green-dark;
+            text-decoration: underline;
+        }
+    }
+}
+
+/* target links e.g. media-block-module as teaser */
+
+@mixin ds-target-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.ds-target-link {
+    @include ds-target-link;
+    display: block;
+}
+
+a.ds-mb {
+    @include ds-target-link;
+}

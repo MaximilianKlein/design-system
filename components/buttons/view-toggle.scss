@@ -1,0 +1,35 @@
+.ds-btn-view-toggle {
+    display: flex;
+    padding: 0;
+    height: 44px;
+
+    &--icon {
+        border-top: 2px solid $color-corporate-green-light;
+        border-bottom: 2px solid $color-corporate-green-light;
+
+        &-left {
+            width: 100%;
+            padding: 8px 10px 8px 13px;
+            border-radius: 22px 0 0 22px;
+            border-left: 2px solid $color-corporate-green-light;
+        }
+
+        &-right {
+            border-radius: 0 22px 22px 0;
+            width: 100%;
+            padding: 5px 9px 5px 8px;
+            font-size: 30px;
+            border-right: 2px solid $color-corporate-green-light;
+        }
+    }
+
+    &--active {
+        background-color: $color-corporate-green-xlight;
+        color: $color-corporate-green;
+    }
+
+    &--inactive {
+        background-color: $color-white;
+        color: $color-corporate-green-light;
+    }
+}
